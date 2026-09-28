@@ -1,0 +1,373 @@
+/* ==========================================================================
+   RedCard 2018 — shared stylesheet for screen1.html and screen2.html
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --maroon: #8a2f33;      /* primary brand background (sampled from both screens) */
+    --maroon-light: #a5484c;/* slightly lighter maroon used for borders/hover */
+    --dark-bar: #10201d;    /* thin near-black strip at the very bottom of screen2 */
+    --text-dark: #1a1a1a;
+    --text-muted: #4a4a4a;
+    --white: #ffffff;
+    --max-width: 1140px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    color: var(--text-dark);
+    background: var(--white);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.wrap {
+    max-width: var(--max-width);
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* ==========================================================================
+   Shared site header (logo on white strip)
+   ========================================================================== */
+
+.site-header {
+    background: var(--white);
+    padding: 1.5rem 2rem;
+}
+
+.site-header__logo {
+    width: 72px;
+    height: 72px;
+}
+
+/* ==========================================================================
+   SCREEN 1 — Submission form
+   ========================================================================== */
+
+.submission-panel {
+    position: relative;
+    background: var(--maroon);
+    color: var(--white);
+    margin: 0 1.25rem 1.25rem;
+    padding: 3.5rem 2.5rem 4rem;
+    border-radius: 4px;
+    /* Diagonal notch cut into the bottom-right corner, matching the reference */
+    clip-path: polygon(0 0, 100% 0, 100% 88%, 90% 100%, 0 100%);
+}
+
+.submission-grid {
+    display: flex;
+    gap: 4rem;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+.submission-intro {
+    flex: 1 1 40%;
+    padding-top: 3rem;
+}
+
+.submission-intro h1 {
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1;
+}
+
+.submission-intro p {
+    font-size: 0.95rem;
+    opacity: 0.85;
+    max-width: 34ch;
+    margin-bottom: 1.5rem;
+}
+
+.submission-intro .deadline {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.submission-form {
+    flex: 1 1 60%;
+}
+
+.field {
+    width: 100%;
+    background: transparent;
+    border: 1px solid var(--white);
+    color: var(--white);
+    padding: 0.9rem 1.1rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    border-radius: 2px;
+}
+
+.field::placeholder {
+    color: rgba(255, 255, 255, 0.85);
+}
+
+textarea.field {
+    resize: vertical;
+    min-height: 70px;
+}
+
+.form-section-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    margin-top: 1.5rem;
+}
+
+.form-section-note {
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.award-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 18%;
+    margin-bottom: 0.6rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.award-row label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+}
+
+.award-row input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    accent-color: var(--white);
+}
+
+/* Small "+" square — no matching asset was provided for this icon,
+   so it is recreated with plain CSS rather than an unrelated image */
+.icon-plus {
+    width: 17px;
+    height: 17px;
+    background: var(--white);
+    color: var(--maroon);
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    flex-shrink: 0;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    background: var(--white);
+    color: var(--text-dark);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 2px;
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.submit-btn .check {
+    color: #2e7d32;
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   SCREEN 2 — Red Card 2018 report / best clubs listing
+   ========================================================================== */
+
+.report-header {
+    position: relative;
+    background: var(--maroon);
+    color: var(--white);
+    padding: 0 0 4.5rem;
+    clip-path: polygon(0 0, 100% 0, 100% 93%, 0 100%);
+}
+
+.report-header .wrap {
+    padding-top: 0.5rem;
+}
+
+.report-header__logo {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 1rem;
+}
+
+.report-header h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    line-height: 1;
+}
+
+.report-header h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.report-header p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+    max-width: 70ch;
+}
+
+.best-clubs {
+    padding: 3rem 0 1rem;
+}
+
+.best-clubs__heading {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-bottom: 1.75rem;
+}
+
+.best-clubs__heading img {
+    width: 28px;
+    height: 28px;
+}
+
+.best-clubs__heading h3 {
+    font-size: 1.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.best-clubs__grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.best-clubs__item {
+    flex: 1 1 0;
+    min-width: 80px;
+}
+
+.best-clubs__item img {
+    width: 100%;
+    max-width: 90px;
+    margin: 0 auto 0.6rem;
+}
+
+.best-clubs__item span {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.report-footer {
+    position: relative;
+    background: var(--maroon);
+    color: var(--white);
+    padding: 2rem 0 3rem;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 88% 100%, 0 88%);
+}
+
+.report-footer h4 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 1.3;
+    max-width: 60ch;
+}
+
+.bottom-bar {
+    background: var(--dark-bar);
+    height: 10px;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 900px) {
+    .submission-grid {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .submission-intro,
+    .submission-form {
+        flex: 1 1 auto;
+    }
+
+    .submission-intro {
+        padding-top: 0;
+    }
+
+    .submission-intro h1 {
+        font-size: 2.4rem;
+    }
+
+    .best-clubs__item {
+        flex: 1 1 28%;
+    }
+}
+
+@media (max-width: 560px) {
+    .site-header {
+        padding: 1rem 1.25rem;
+    }
+
+    .wrap {
+        padding: 0 1.25rem;
+    }
+
+    .submission-panel {
+        margin: 0 0.75rem 0.75rem;
+        padding: 2.5rem 1.5rem 3rem;
+    }
+
+    .submission-intro h1 {
+        font-size: 2rem;
+    }
+
+    .report-header h1 {
+        font-size: 1.8rem;
+    }
+
+    .best-clubs__item {
+        flex: 1 1 40%;
+    }
+
+    .award-row {
+        font-size: 0.8rem;
+    }
+}
