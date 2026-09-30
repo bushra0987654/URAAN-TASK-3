@@ -234,15 +234,11 @@ textarea.field {
 }
 
 .report-header p {
-    font-size: 1.1rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
-    color: #000000;
-    opacity: 1;
+    font-size: 0.85rem;
+    opacity: 0.9;
     margin-bottom: 1rem;
     max-width: 70ch;
 }
-
 .best-clubs {
     padding: 3rem 0 1rem;
 }
