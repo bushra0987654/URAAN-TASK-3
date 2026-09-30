@@ -288,6 +288,10 @@ textarea.field {
     font-weight: 700;
     line-height: 1.2;
 }
+.best-clubs__item span.red-text {
+    color: #8a2f33 !important;
+    display: inline;
+}
 .red-text {
     color: #8a2f33;
 }
