@@ -288,7 +288,9 @@ textarea.field {
     font-weight: 700;
     line-height: 1.2;
 }
-
+.red-text {
+    color: #8a2f33;
+}
 .report-footer {
     position: relative;
     background: var(--maroon);
