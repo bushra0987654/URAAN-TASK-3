@@ -218,12 +218,14 @@ textarea.field {
 
 .report-header .wrap {
     padding-top: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
 }
 
 .report-header__logo {
     width: 90px;
     height: 90px;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .report-header h1 {
@@ -231,15 +233,23 @@ textarea.field {
     font-weight: 800;
     letter-spacing: 0.05em;
     line-height: 1;
+    margin: 0 0 0.5rem 0;
 }
+
 .report-header h2 {
     color: #000000;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 0 0 1.2rem 0;
+    line-height: 1.2;
 }
+
 .report-header p {
     font-size: 0.85rem;
     opacity: 0.9;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
     max-width: 70ch;
+    line-height: 1.5;
 }
 .best-clubs {
     padding: 3rem 0 1rem;
